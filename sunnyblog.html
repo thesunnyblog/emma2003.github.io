@@ -1,0 +1,79 @@
+<html>
+	<head>
+		<link type="text/css" rel="stylesheet" href="main.css" />
+		<title> TheSunnyBlog </title>
+		<script>
+			function banner(){
+			var text = confirm("Did You Really Want to Click on My Banner?");
+			return text;
+			}
+			function answer(){
+			var radio = document.getElementsByName("trivia");
+			var selection = false;
+			var message = "";
+
+			for( var i = 0; i < radio.length; i++) {
+			if(radio[i].value == "kcr" && radio[i].checked == true) {
+			selection = true;
+			} //end if statement
+			} //end for loop
+
+			if(selection == true) {
+			message = message + "<b><p style='color:green'>Way to go!</p></b>";
+			} else {
+			message = message + "<b><p style='color:red'>Try again my friend.</p></b>";
+			}
+			document.getElementById("response").innerHTML = message;
+
+			} //end function answer
+		</script>
+
+	</head>
+
+	<body id="background">
+		<a onclick="return banner()" href="http://simplystem.com">
+			<header id="header"><center><b>THE SUNNY BLOG<b><center></header>
+		</a>
+
+		<nav>
+			<ul id="navmenu">
+			<li class="navitem"> <a href="index.html"> Home </a> </li>
+			<li class="navitem"> <a href="photos.html"> Photos </a> </li>
+			<li class="navitem"> <a href="trivia.html"> Trivia </a> </li>
+			</ul>
+		</nav>
+
+		<div class="rightside">
+			<ol class="wrap-list">
+				<li class="listitem">Family Life</li>
+				<li class="listitem">School Days</li>
+				<li class="listitem">Just for Fun</li>
+			</ol>
+		</div>
+
+		<div class="leftside">
+			<h1><center> I'm Emma, Welcome to my blog! <center/></h1>
+
+			<p class="paragraph"> Hey! Let me introduce myself, I'm the oldest of ten children. We live in a mansion, with an elevator. Life is never dull. There are 4 girls and 6 boys. I'm 16yrs old and the youngest is 4. Half of us are homeschooled and Half are publiced schooled.
+		</div>
+
+		<div class="clearfloat"></div>
+
+		<div class="wrap-trivia"> 
+			<h2> Get to Know Me Trivia:</h2>
+				<p>What is My Favorite Snack?</p>
+				<div id="response"> </div>
+				<input type="radio" name="trivia" value="no" id="button"> Lays Chips <br>
+				<input type="radio" name="trivia" value="no" id="button"> PB'n'J <br>
+				<input type="radio" name="trivia" value="yes" id="button"> Oreos <br>
+				<input type="radio" name="trivia" value="no" id="button"> Munchies <br>
+				<input onclick="answer()" type="button" id="submit" value="Click Here"> <br>
+		</div>
+
+		<img class="img" width="20%" src= https://images.freeimages.com/images/small-previews/b2d/pointe-1419297.jpg />
+
+		MY IG: <a href= https://www.instagram.com/emma_jane0603/> emmajane_0603
+
+		<footer id="footer"> </footer>
+	</body>
+</html>
